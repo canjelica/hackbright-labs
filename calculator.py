@@ -24,46 +24,48 @@ def calculate_two_numbers():
         elif operator == 'add':
             result = add(num1, num2)
             print(result)
-            break
+            # break
 
         elif operator == 'substract':
             result = subtract(num1, num2)
             print(result)
-            break
+            # break
 
         elif operator == 'multiply':
             result = multiply(num1, num2)
             print(result)
-            break
+            # break
 
         elif operator == 'divide':
             result = divide(num1, num2)
             print(result)
-            break
+            # break
 
         elif operator == 'square':
             result = square(num1)
             print(result)
-            break
+            # break
 
         elif operator == 'cube':
             result = cube(num1)
             print(result)
-            break
+            # break
 
         elif operator == 'exponent':
             result = power(num1, num2)
             print(result)
-            break
+            # break
 
         elif operator == 'remainder':
             result = mod(num1, num2)
             print(result)
-            break
+            # break
         
 
         elif operator == 'subtract':
             result = subtract(num1, num2)
+            print(result)
+            # break
                 
 calculate_two_numbers()
 
