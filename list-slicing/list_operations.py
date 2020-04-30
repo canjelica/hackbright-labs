@@ -98,7 +98,8 @@ def middle(input_list):
     """
 
     for item in input_list:
-        return input_list[3:-2]
+        middle_nums = input_list[2:-2]
+    return middle_nums
 
 
 def inner_four(input_list):
