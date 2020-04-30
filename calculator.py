@@ -3,17 +3,67 @@
 from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
 
+def calculate_two_numbers():
+    print("Welcome to the Calculator.")
 
-print("Welcome to the Calculator.")
+    print('Please enter one of the following operators: add, substract, multiply, divide, square, cube, exponent, or remainder, followed by the numbers you would like to calculate. For example, "add 5 3". Press "q" to exit the calculator.')
+    
+    calculator_input = input("What would you like to calculate first? ")
+    tokens = calculator_input.split(' ')
+   
+    operator = tokens[0]
+    
+    num1 = float(tokens[1])
+    
+    num2 = float(tokens[2])
+   
+    while True:
+        if tokens == 'q':
+            break
 
-user_calculation = 'Please enter one of the following operators: add, substract, multiply, divide, square, cube, or exponent, followed by the numbers you'd like to calculate. For example, "add 5 3". What would you like to calculate first?')
+        elif operator == 'add':
+            result = add(num1, num2)
+            print(result)
+            break
 
-#while True:
-#     read input
-#     tokenize input
-#         if the first token is "q":
-#             quit
-#         else:
-#             (decide which math function to call based on first token)
-#             if the first token is 'pow':
-#                   call the power function with the other two tokens
+        elif operator == 'substract':
+            result = subtract(num1, num2)
+            print(result)
+            break
+
+        elif operator == 'multiply':
+            result = multiply(num1, num2)
+            print(result)
+            break
+
+        elif operator == 'divide':
+            result = divide(num1, num2)
+            print(result)
+            break
+
+        elif operator == 'square':
+            result = square(num1)
+            print(result)
+            break
+
+        elif operator == 'cube':
+            result = cube(num1)
+            print(result)
+            break
+
+        elif operator == 'exponent':
+            result = power(num1, num2)
+            print(result)
+            break
+
+        elif operator == 'remainder':
+            result = mod(num1, num2)
+            print(result)
+            break
+        
+
+        elif operator == 'subtract':
+            result = subtract(num1, num2)
+                
+calculate_two_numbers()
+
