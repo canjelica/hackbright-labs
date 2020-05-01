@@ -71,7 +71,8 @@ def first_three(input_list):
     """
 
     for item in input_list:
-        return input_list[:4]
+        first_three = input_list[:3]
+    return first_three
 
 
 def last_five(input_list):
@@ -83,7 +84,9 @@ def last_five(input_list):
     [15, 18, 21, 24, 27]"""
 
     for item in input_list:
-        return input_list[-1:-6]
+        last_five = input_list
+        del last_five[0:-5]
+    return last_five
     
 
 
