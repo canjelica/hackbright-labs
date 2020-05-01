@@ -15,10 +15,18 @@ def all_houses(filename):
       - set[str]: a set of strings
     """
 
+    cohort_data = open(filename)
     houses = set()
 
-    # TODO: replace this with your code
+    for line in cohort_data:
+      words = line.rstrip()
+      words = line.split("|")
 
+      first_name, last_name, house, adviser, cohort_name = words
+
+      houses.add(house)
+    
+    houses.remove('')
     return houses
 
 
