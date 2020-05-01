@@ -13,8 +13,7 @@ def head(input_list):
       'Jan'
     """
 
-    for item in input_list:
-        return input_list.pop(0)
+    return input_list.pop(0)
 
 
 def tail(input_list):
@@ -26,10 +25,8 @@ def tail(input_list):
     ['Feb', 'Mar']
 
     """
-
-    for item in input_list:
-        new_list = input_list[1:]
-    return new_list
+    return input_list[1:]
+    
 
 
 def last(input_list):
@@ -55,9 +52,7 @@ def top(input_list):
     ['Jan', 'Feb']
 
     """
-
-    for item in input_list:
-        return input_list[:-1]
+    return input_list[:-1]
 
 
 def first_three(input_list):
@@ -69,10 +64,7 @@ def first_three(input_list):
     ['Jan', 'Feb', 'Mar']
 
     """
-
-    for item in input_list:
-        first_three = input_list[:3]
-    return first_three
+    return input_list[:3]
 
 
 def last_five(input_list):
@@ -83,12 +75,8 @@ def last_five(input_list):
     >>> last_five([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
     [15, 18, 21, 24, 27]"""
 
-    for item in input_list:
-        last_five = input_list
-        del last_five[0:-5]
-    return last_five
+    return input_list[-5:]
     
-
 
 def middle(input_list):
     """Return all elements of input_list except the first two and the last two.
@@ -99,10 +87,7 @@ def middle(input_list):
     [6, 9, 12, 15, 18, 21]
 
     """
-
-    for item in input_list:
-        middle_nums = input_list[2:-2]
-    return middle_nums
+    return input_list[2:-2]
 
 
 def inner_four(input_list):
@@ -115,8 +100,7 @@ def inner_four(input_list):
 
     """
 
-    for item in input_list:
-        return input_list[2:6:2]
+    return input_list[2:6:1]
 
 
 def inner_four_end(input_list):
@@ -132,10 +116,8 @@ def inner_four_end(input_list):
 
     """
 
-    for item in input_list:
-        inner_four_end_list = []
-        inner_four_end_list = input_list[2:6:1]
-        return inner_four_end_list[::-1]
+    return input_list[-6:-2]
+
 
 
 def replace_head(input_list):
@@ -150,8 +132,9 @@ def replace_head(input_list):
 
     """
 
-    for item in input_list:
-        input_list[0] = [42]
+    input_list[0] = 42
+          
+    return
 
 
 def replace_third_and_last(input_list):
@@ -165,10 +148,11 @@ def replace_third_and_last(input_list):
     True
 
     """
-
-    for item in input_list:
-        input_list[2] = [37]
-        input_list[-1] = [37]
+    
+    input_list[2] = 37
+    input_list[-1] = 37
+    
+    return
 
 
 
@@ -188,8 +172,13 @@ def replace_middle(input_list):
     True
 
     """
+    
+    input_list[2:-2] = [42, 37]
 
-    pass
+    return
+
+
+    
 
 
 def delete_third_and_seventh(input_list):
@@ -203,8 +192,13 @@ def delete_third_and_seventh(input_list):
     True
 
     """
+    
+    del input_list[2]
+    del input_list[5]
+    
+    return
 
-    pass
+    
 
 
 def delete_middle(input_list):
@@ -220,6 +214,8 @@ def delete_middle(input_list):
     True
 
     """
+
+    del input_list[2:-2]
 
     pass
 
