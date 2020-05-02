@@ -19,14 +19,16 @@ def all_houses(filename):
     houses = set()
 
     for line in cohort_data:
-      words = line.rstrip()
-      words = line.split("|")
+      line = line.rstrip()
+      data = line.split("|")   #[first, name, house, adviser, cohort]
 
-      first_name, last_name, house, adviser, cohort_name = words
+      first_name, last_name, house, adviser, cohort = data
 
       houses.add(house)
     
-    houses.remove('')
+    if '' in houses:
+      houses.remove('')
+    
     return houses
 
 
