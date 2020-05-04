@@ -31,6 +31,8 @@ def all_houses(filename):
     
     return houses
 
+all_houses("cohort_data.txt")
+
 
 def students_by_cohort(filename, cohort='All'):
     """Return a list of students' full names by cohort.
@@ -61,8 +63,20 @@ def students_by_cohort(filename, cohort='All'):
     """
 
     students = []
+    cohort_data = open(filename)
 
-    # TODO: replace this with your code
+    for line in cohort_data:
+      line = line.rstrip()
+      data = line.split("|")   #[first, name, house, adviser, cohort]
+
+      first_name, last_name, house, adviser, cohort_name = data
+
+      fname_lname = first_name + last_name
+
+      if cohort_name in cohort:
+        students.append(cohort_name)
+    
+    print(students)
 
     return sorted(students)
 
