@@ -41,8 +41,9 @@ def make_melon_types():
     all_melon_types = []
 
     melon_type = MelonType(object)
-    melon_type.add_pairing(self, pairing)
-    all_melon_types.append(self.name)
+
+    melon_type.add_pairing(pairing)
+    all_melon_types.append(melon_type)
 
     return all_melon_types
 
