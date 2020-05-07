@@ -53,6 +53,9 @@ def print_words(word_dict):
     # adding each list item to dict
     
     
+wordlist = tokenize("test.txt")
+word_dict = count_words(wordlist)
+
 
 
 

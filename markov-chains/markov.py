@@ -49,27 +49,69 @@ def make_chains(text_string):
     chains = {}
 
     wordlist = text_string.split()
+
     # print(text_string)
 
-    for i in range(len(wordlist) - 1):
-        print(wordlist[i], wordlist[i + 1])
+    for i in range(len(wordlist) - 2):
+        word_pairs = (wordlist[i], wordlist[i + 1])
+        word_pairs_value = wordlist[i+2]
+        # chains[word_pairs] = word_pairs_value
+        # valueslist = list(word_pairs_value)
+
+        
+        followers = chains.get(word_pairs,[])
+        followers.append(word_pairs_value)
+        
+        chains[word_pairs] = followers
+    
+    return chains
+ 
+
+
+
+def make_text(chains):
+    """Return text from chains."""
+    import random
+
+    words = []
+
+    # chain_keys = chains.keys()
+    # chain_values = chains.values()
+
+    # for chain in chains:
+    #     link = random.choice(chains[chain])
+    #     print(link)
+
+    key = choice(list(chains.keys()))
+    
+    values = chains[key]
+
+
+    first_word = key[0]
+    keyvalue = values[0]
+    
+    print(first_word)
+    print(keyvalue)
+    
+    if first_word is not None: 
+        words.append(first_word)
+        words.append(keyvalue)
+        first_word = keyvalue
+    
+              
+
+    
+    
+
+
+        
+
+
 
 
     # your code goes here
 
-    return wordlist
-
-
-
-
-# def make_text(chains):
-#     """Return text from chains."""
-
-#     words = []
-
-#     # your code goes here
-
-#     return " ".join(words)
+    # return " ".join(words)
 
 
 # input_path = "green-eggs.txt"
@@ -87,4 +129,4 @@ def make_chains(text_string):
 
 
 text_string = open_and_read_file("green-eggs.txt")
-chain = make_chains(text_string)
+chains = make_chains(text_string)
