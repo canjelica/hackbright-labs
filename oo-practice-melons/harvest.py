@@ -27,6 +27,7 @@ class MelonType(object):
         
         self.pairing = pairing
         print(f"{self.name} pairs well with {self.pairing}")
+        return pairing
 
     def update_code(self, new_code):
         """Replace the reporting code with the new_code."""
@@ -35,14 +36,13 @@ class MelonType(object):
         print(f"{self.name}'s new code is '{new_code}'")
 
 
-def make_melon_types():
+def make_melon_types(melon_type):
     """Returns a list of current melon types."""
 
     all_melon_types = []
 
-    melon_type = MelonType(object)
-
-    melon_type.add_pairing(pairing)
+    pairing = melon_type.add_pairing(pairing)
+    
     all_melon_types.append(melon_type)
 
     return all_melon_types
